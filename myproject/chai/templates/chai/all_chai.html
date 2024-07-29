@@ -9,3 +9,11 @@ chai page
 {% block content %}
     <h1>all chai for u</h1>
 {% endblock %}
+
+{% for chai in chais %}
+  <div class="chai-item">
+    <img src="{{ chai.image.url }}" alt="{{ chai.name }}">
+    <h3>{{ chai.name }}</h3>
+    <p>{{ chai.description }}</p>
+  </div>
+{% endfor %}
